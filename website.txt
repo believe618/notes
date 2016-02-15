@@ -1,4 +1,5 @@
 1.https://fossdroid.com/a/fdroid.html
-¸÷¸öappÀ´¿ª»áÁË£¬½ñÌì»áÒéµÄÖ÷ÌâÊÇ¿ªÔ´¡£ÓÑÇéÌáÊ¾£ºµã»÷Ò»¸öappÏêÇé½øÈ¥ºó£¬
-¿´µ½ÀàËÆSource (GPLv3+ }µã»÷ºó£¬¾ÍÄÜºÍÔ´ÂëÓä¿ìÍæË£ÁË£¨ÓÐÊ±·Å×Ý£©
-
+å„ä¸ªappæ¥å¼€ä¼šäº†ï¼Œä»Šå¤©ä¼šè®®çš„ä¸»é¢˜æ˜¯å¼€æºã€‚å‹æƒ…æç¤ºï¼šç‚¹å‡»ä¸€ä¸ªappè¯¦æƒ…è¿›åŽ»åŽï¼Œ
+çœ‹åˆ°ç±»ä¼¼Source (GPLv3+ }ç‚¹å‡»åŽï¼Œå°±èƒ½å’Œæºç æ„‰å¿«çŽ©è€äº†ï¼ˆæœ‰æ—¶æ”¾çºµï¼‰
+2.http://kolor.moro.es/ ä¸€ä¸ªé¢œè‰²çš„æ¸¸æˆ
+3.
