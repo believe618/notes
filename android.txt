@@ -1,3 +1,10 @@
-wifi�����ֻ���
+1.wifi无线连接手机：
 adb tcpip 5555
 adb connect <ip_address>
+
+2.电脑adb连接手机：
+修改adb_usb.ini
+1.在任务管理器中查看移动设备的VID号。
+2.在模拟器存放的目录<例如：C:\Documents and Settings\Administrator\.android或当前SDK目录下的.android>
+下找到或新建一个adb_usb.ini文件，同时增加或写入上面设备的0xVID（VID就是上面的VID_后面跟的数字，例如：0x1782），
+\弄好了再使用重新启动android sdk中的adb就能连接上了
