@@ -1,0 +1,12 @@
+pods安装：
+
+sudo gem update --system
+
+gem sources -l
+gem sources --remove https://rubygems.org/
+gem sources -a https://ruby.taobao.org/
+gem sources -l
+
+sudo gem install -n /usr/local/bin cocoapods
+
+再到工程路径   运行   pod install 
