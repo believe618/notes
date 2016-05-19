@@ -10,3 +10,6 @@ gem sources -l
 sudo gem install -n /usr/local/bin cocoapods
 
 再到工程路径   运行   pod install 
+
+//git 默认缓存大小
+git config http.postBuffer 524288000
