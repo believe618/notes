@@ -13,3 +13,5 @@ sudo gem install -n /usr/local/bin cocoapods
 
 //git 默认缓存大小
 git config http.postBuffer 524288000
+
+git config -l
