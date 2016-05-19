@@ -8,8 +8,10 @@ gem sources -a https://ruby.taobao.org/
 gem sources -l
 
 sudo gem install -n /usr/local/bin cocoapods
+git clone https://gitcafe.com/akuandev/Specs.git master
+pod setup
 
-再到工程路径   运行   pod install 
+再到工程路径   运行
 pod install --verbose --no-repo-update
 //git 默认缓存大小
 git config http.postBuffer 524288000
