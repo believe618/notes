@@ -8,3 +8,42 @@ adb connect <ip_address>
 2.在模拟器存放的目录<例如：C:\Documents and Settings\Administrator\.android或当前SDK目录下的.android>
 下找到或新建一个adb_usb.ini文件，同时增加或写入上面设备的0xVID（VID就是上面的VID_后面跟的数字，例如：0x1782），
 \弄好了再使用重新启动android sdk中的adb就能连接上了
+
+3.动态获取资源ID 
+package com.arui.util;  
+
+import android.content.Context;  
+
+public class ResourceUtil {  
+
+    public static int getLayoutId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString, "layout",  
+                paramContext.getPackageName());  
+    }  
+
+    public static int getStringId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString, "string",  
+                paramContext.getPackageName());  
+    }  
+
+    public static int getDrawableId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString,  
+                "drawable", paramContext.getPackageName());  
+    }  
+
+    public static int getStyleId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString,  
+                "style", paramContext.getPackageName());  
+    }  
+
+    public static int getId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString,  
+                "id", paramContext.getPackageName());  
+    }  
+
+    public static int getColorId(Context paramContext, String paramString) {  
+        return paramContext.getResources().getIdentifier(paramString,  
+                "color", paramContext.getPackageName());  
+    }  
+
+}  
