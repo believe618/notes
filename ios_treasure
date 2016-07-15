@@ -1,0 +1,50 @@
+IOS审核注意事项：
+1、CommonConfig接口只要请求失败，则打开app为空白页，如果成功，则请求其他接口。
+2、苹果审核，建设银行不能传小数，因为单位是分。
+3、上架的产品需要过滤，不能有苹果及其竞争对手的产品，目前在model返回时转换时候过滤。
+4、审核宣传图片要求，不能alpha通道，详情查看苹果官方文档说明。
+5、利用ApplicationLoader上传时，会进行私有API的检测。
+6、上传到蒲公英（Hoc）测试和苹果AppStore时，选择的项目不同。
+7、后台添加设备：iTunes-> Devices-> add
+
+提交过程：
+1、检查Vcode与AppStore进行对比，更新工程的版本号Version（如果被拒绝重新提交，则版本号Version不能变），Build加1。
+2、苹果审核的产品列表配置在pch文件中。
+3、检测URL,在文件DUNetworkAccessURL.h中
+4、准备发布：Product-> Archive-> Validete*（选择对应账号）-> Export->
+   A: 选择 AppStore-> Export到桌面（选择对应账号）->ApplicationLoader-> 登录相应账号->选取文件（ipa）->发送
+   B：选择Ad Hoc（蒲公英测试） -> Export到桌面（选择对应账号）->登录蒲公英地址
+https://www.pgyer.com
+
+      账户：601461125@qq.com  believe618@163.com
+    密码：dulinlong         64*****ABc
+      -> 在我们自己的测试地址进行扫描测试http://www.510wifi.com/test.html （换成我的账号测试，需要卢宇更新二维码和Url）
+
+
+IOS Treasure笔记：
+1、Assets.xcassets 目录，系统新建工程时自动生成。
+   放图片：外部新建文件夹，图片加入后拖入目录即可。
+2、闪屏页为LaunchScreen.storyboard,可以关联一个ViewController,BrandAsset目录下的四张图片必须要有。
+3、假适配？
+4、修改了根据CommonConfig的registerReward来判断是否显示注册送金币的对话框。
+
+审核开关位置：
+1、分类页中的产品、首页、最新揭晓、活动记录中过滤相关产品。
+2、任务界面有两个界面进行切换。
+3、参加活动界面、充值界面有两个逻辑，审核时统一跳转到订单详情界面，用建行支付，正常情况下调用微信支付。
+4、审核时，屏蔽所有“余额”，包括个人中心、参加活动，订单详情界面。
+5、个人中心隐藏“充值”“账户明细”“余额”。
+6、活动记录中的已完成界面隐藏了“分享红包”。
+7、邀请好友中隐藏相关文案，隐藏空白页。
+8、去掉登录转盘对话框、去掉注册成功后的对话框，去掉以一次打开APP颜值对话框。
+9、首页轮播隐藏。
+
+IOS问题：
+1、JPUSH生产环境和发布环境区别？
+2、Jpush注册区分IOS版本是为何？Jpush注册时机？
+3、好好讲讲AppDelegate.mm
+4、更新逻辑
+5、Rewards->DULotteryWindow.m(HistoryViewController?)
+6、首页(DUActivitiesViewController.m)的setions和其中的item区分？首页count是否包括header和footer？sizeForItemAtIndexPath？
+7、首页秒杀item: _connectionView 设置了2次height?而且（sizeForItemAtIndexPath又设置了一次size?）
+
