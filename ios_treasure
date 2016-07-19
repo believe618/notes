@@ -61,12 +61,12 @@ IOS问题：
   方式二：
   工程->Targets -> General -> Team -> Add an Account -> Provisioning Profiles(Dowmload)
   
-  IOS开发笔记：
+IOS开发笔记：
   1.列表中若有导读、宽度等不一定的情况：需要额外设置
     _titleLab.preferreMaxLayoutWidth = ScreenWidth -m - n ...
   2.使用CollectionView(流式布局)时，需要自己计算cell的高度，使用tableView时，可用第三方库完成自动计算高度。
 
-  Treasure工程优化：
+Treasure工程优化：
   1.ThirdViewController重复定义了页面标签
   2.所有的刷新、加载更多，请求时的参数timeStap 、page 等赋值错误
   3.提交任务列表cell大小80*80->适配4S 时，需要变小
