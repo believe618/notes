@@ -48,3 +48,28 @@ IOS问题：
 6、首页(DUActivitiesViewController.m)的setions和其中的item区分？首页count是否包括header和footer？sizeForItemAtIndexPath？
 7、首页秒杀item: _connectionView 设置了2次height?而且（sizeForItemAtIndexPath又设置了一次size?）
 
+全新上架APP：
+  方式一：
+    1.配置证书 
+       A.开发证书（a.IOS App Development b.App Push (sandbox)）
+       B.发布证书（推送证书分为开发与发布证书，需要自己的服务器修改相应的配置）
+    2.新建Identifiers (com.gamedadi.sweety)
+    3.添加设备Devices
+    4.添加配置文件（Provisioning Profiles）
+       A.开发的配置文件
+       B.发布的配置文件
+  方式二：
+  工程->Targets -> General -> Team -> Add an Account -> Provisioning Profiles(Dowmload)
+  
+  IOS开发笔记：
+  1.列表中若有导读、宽度等不一定的情况：需要额外设置
+    _titleLab.preferreMaxLayoutWidth = ScreenWidth -m - n ...
+  2.使用CollectionView(流式布局)时，需要自己计算cell的高度，使用tableView时，可用第三方库完成自动计算高度。
+
+  Treasure工程优化：
+  1.ThirdViewController重复定义了页面标签
+  2.所有的刷新、加载更多，请求时的参数timeStap 、page 等赋值错误
+  3.提交任务列表cell大小80*80->适配4S 时，需要变小
+  4.活动详情参与列表的头像不显示问题
+  5.个人中心选择城市 -> 接口变了.(fixed)
+  6.验证码倒计时本地保存。
